@@ -18,7 +18,7 @@ document.getElementById("reset").onclick = function() {
         errorMsg = "You have reached your content limit."
         title_container.innerHTML = `<p style="font: normal normal bold 14px/16px Roboto, sans-serif; color:#FF0000">${errorMsg}</p>`;
     }
-};
+}
 function startTimer(duration, display) {
     var intTimer = duration, minutes, seconds;
     let myVar = setInterval(function () {
