@@ -1,4 +1,6 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+
+},{}],2:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -150,9 +152,9 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],2:[function(require,module,exports){
-
 },{}],3:[function(require,module,exports){
+arguments[4][1][0].apply(exports,arguments)
+},{"dup":1}],4:[function(require,module,exports){
 (function (Buffer){(function (){
 /*!
  * The buffer module from node.js, for the browser.
@@ -1933,7 +1935,7 @@ function numberIsNaN (obj) {
 }
 
 }).call(this)}).call(this,require("buffer").Buffer)
-},{"base64-js":1,"buffer":3,"ieee754":5}],4:[function(require,module,exports){
+},{"base64-js":2,"buffer":4,"ieee754":6}],5:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -2411,7 +2413,7 @@ function once(emitter, name) {
   });
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
@@ -2498,7 +2500,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -2527,7 +2529,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -2713,7 +2715,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 (function (global){(function (){
 /*! https://mths.be/punycode v1.4.1 by @mathias */
 ;(function(root) {
@@ -3250,7 +3252,7 @@ process.umask = function() { return 0; };
 }(this));
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -3336,7 +3338,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -3423,13 +3425,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":9,"./encode":10}],12:[function(require,module,exports){
+},{"./decode":10,"./encode":11}],13:[function(require,module,exports){
 /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
@@ -3496,7 +3498,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":3}],13:[function(require,module,exports){
+},{"buffer":4}],14:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -3627,7 +3629,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":4,"inherits":6,"readable-stream/lib/_stream_duplex.js":15,"readable-stream/lib/_stream_passthrough.js":16,"readable-stream/lib/_stream_readable.js":17,"readable-stream/lib/_stream_transform.js":18,"readable-stream/lib/_stream_writable.js":19,"readable-stream/lib/internal/streams/end-of-stream.js":23,"readable-stream/lib/internal/streams/pipeline.js":25}],14:[function(require,module,exports){
+},{"events":5,"inherits":7,"readable-stream/lib/_stream_duplex.js":16,"readable-stream/lib/_stream_passthrough.js":17,"readable-stream/lib/_stream_readable.js":18,"readable-stream/lib/_stream_transform.js":19,"readable-stream/lib/_stream_writable.js":20,"readable-stream/lib/internal/streams/end-of-stream.js":24,"readable-stream/lib/internal/streams/pipeline.js":26}],15:[function(require,module,exports){
 'use strict';
 
 function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
@@ -3756,7 +3758,7 @@ createErrorType('ERR_UNKNOWN_ENCODING', function (arg) {
 createErrorType('ERR_STREAM_UNSHIFT_AFTER_END_EVENT', 'stream.unshift() after end event');
 module.exports.codes = codes;
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 (function (process){(function (){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -3898,7 +3900,7 @@ Object.defineProperty(Duplex.prototype, 'destroyed', {
   }
 });
 }).call(this)}).call(this,require('_process'))
-},{"./_stream_readable":17,"./_stream_writable":19,"_process":7,"inherits":6}],16:[function(require,module,exports){
+},{"./_stream_readable":18,"./_stream_writable":20,"_process":8,"inherits":7}],17:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -3938,7 +3940,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":18,"inherits":6}],17:[function(require,module,exports){
+},{"./_stream_transform":19,"inherits":7}],18:[function(require,module,exports){
 (function (process,global){(function (){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -5065,7 +5067,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this)}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../errors":14,"./_stream_duplex":15,"./internal/streams/async_iterator":20,"./internal/streams/buffer_list":21,"./internal/streams/destroy":22,"./internal/streams/from":24,"./internal/streams/state":26,"./internal/streams/stream":27,"_process":7,"buffer":3,"events":4,"inherits":6,"string_decoder/":28,"util":2}],18:[function(require,module,exports){
+},{"../errors":15,"./_stream_duplex":16,"./internal/streams/async_iterator":21,"./internal/streams/buffer_list":22,"./internal/streams/destroy":23,"./internal/streams/from":25,"./internal/streams/state":27,"./internal/streams/stream":28,"_process":8,"buffer":4,"events":5,"inherits":7,"string_decoder/":29,"util":3}],19:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -5267,7 +5269,7 @@ function done(stream, er, data) {
   if (stream._transformState.transforming) throw new ERR_TRANSFORM_ALREADY_TRANSFORMING();
   return stream.push(null);
 }
-},{"../errors":14,"./_stream_duplex":15,"inherits":6}],19:[function(require,module,exports){
+},{"../errors":15,"./_stream_duplex":16,"inherits":7}],20:[function(require,module,exports){
 (function (process,global){(function (){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -5967,7 +5969,7 @@ Writable.prototype._destroy = function (err, cb) {
   cb(err);
 };
 }).call(this)}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../errors":14,"./_stream_duplex":15,"./internal/streams/destroy":22,"./internal/streams/state":26,"./internal/streams/stream":27,"_process":7,"buffer":3,"inherits":6,"util-deprecate":32}],20:[function(require,module,exports){
+},{"../errors":15,"./_stream_duplex":16,"./internal/streams/destroy":23,"./internal/streams/state":27,"./internal/streams/stream":28,"_process":8,"buffer":4,"inherits":7,"util-deprecate":33}],21:[function(require,module,exports){
 (function (process){(function (){
 'use strict';
 
@@ -6177,7 +6179,7 @@ var createReadableStreamAsyncIterator = function createReadableStreamAsyncIterat
 
 module.exports = createReadableStreamAsyncIterator;
 }).call(this)}).call(this,require('_process'))
-},{"./end-of-stream":23,"_process":7}],21:[function(require,module,exports){
+},{"./end-of-stream":24,"_process":8}],22:[function(require,module,exports){
 'use strict';
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -6388,7 +6390,7 @@ function () {
 
   return BufferList;
 }();
-},{"buffer":3,"util":2}],22:[function(require,module,exports){
+},{"buffer":4,"util":3}],23:[function(require,module,exports){
 (function (process){(function (){
 'use strict'; // undocumented cb() API, needed for core, not for public API
 
@@ -6496,7 +6498,7 @@ module.exports = {
   errorOrDestroy: errorOrDestroy
 };
 }).call(this)}).call(this,require('_process'))
-},{"_process":7}],23:[function(require,module,exports){
+},{"_process":8}],24:[function(require,module,exports){
 // Ported from https://github.com/mafintosh/end-of-stream with
 // permission from the author, Mathias Buus (@mafintosh).
 'use strict';
@@ -6601,12 +6603,12 @@ function eos(stream, opts, callback) {
 }
 
 module.exports = eos;
-},{"../../../errors":14}],24:[function(require,module,exports){
+},{"../../../errors":15}],25:[function(require,module,exports){
 module.exports = function () {
   throw new Error('Readable.from is not available in the browser')
 };
 
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 // Ported from https://github.com/mafintosh/pump with
 // permission from the author, Mathias Buus (@mafintosh).
 'use strict';
@@ -6704,7 +6706,7 @@ function pipeline() {
 }
 
 module.exports = pipeline;
-},{"../../../errors":14,"./end-of-stream":23}],26:[function(require,module,exports){
+},{"../../../errors":15,"./end-of-stream":24}],27:[function(require,module,exports){
 'use strict';
 
 var ERR_INVALID_OPT_VALUE = require('../../../errors').codes.ERR_INVALID_OPT_VALUE;
@@ -6732,10 +6734,10 @@ function getHighWaterMark(state, options, duplexKey, isDuplex) {
 module.exports = {
   getHighWaterMark: getHighWaterMark
 };
-},{"../../../errors":14}],27:[function(require,module,exports){
+},{"../../../errors":15}],28:[function(require,module,exports){
 module.exports = require('events').EventEmitter;
 
-},{"events":4}],28:[function(require,module,exports){
+},{"events":5}],29:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7032,7 +7034,7 @@ function simpleWrite(buf) {
 function simpleEnd(buf) {
   return buf && buf.length ? this.write(buf) : '';
 }
-},{"safe-buffer":12}],29:[function(require,module,exports){
+},{"safe-buffer":13}],30:[function(require,module,exports){
 (function (setImmediate,clearImmediate){(function (){
 var nextTick = require('process/browser.js').nextTick;
 var apply = Function.prototype.apply;
@@ -7111,7 +7113,7 @@ exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate :
   delete immediateIds[id];
 };
 }).call(this)}).call(this,require("timers").setImmediate,require("timers").clearImmediate)
-},{"process/browser.js":7,"timers":29}],30:[function(require,module,exports){
+},{"process/browser.js":8,"timers":30}],31:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -7845,7 +7847,7 @@ Url.prototype.parseHost = function() {
   if (host) this.hostname = host;
 };
 
-},{"./util":31,"punycode":8,"querystring":11}],31:[function(require,module,exports){
+},{"./util":32,"punycode":9,"querystring":12}],32:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -7863,7 +7865,7 @@ module.exports = {
   }
 };
 
-},{}],32:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 (function (global){(function (){
 
 /**
@@ -7934,7 +7936,8 @@ function config (name) {
 }
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],33:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
+const { url } = require('inspector');
 var snoowrap = require('snoowrap');
 const ul = document.getElementById("picture");
 const r = new snoowrap({
@@ -7943,9 +7946,11 @@ const r = new snoowrap({
     clientSecret: 'ySBaWF7k_IXIrgfCPe2IosbKjWmn2Qx',
     username: 'QuadSquad776',
     password: '4444quadsquad'
-  });
+});
 // append(createNode(ul), r.getSubreddit('gifs'));
-getRedditData();
+document.getElementById("reset").onclick = function() {getRedditData();};
+
+let subreddit_list = ["cats", "dogpictures", "earthporn", "spaceporn", "roomporn", "mostbeautiful"];
 function createNode(element){
     return document.createElement(element);
 }
@@ -7954,25 +7959,31 @@ function append(parent, el)
 {
     return parent.appendChild(el)
 }
-
 async function getRedditData() {
-    // test url, to be replaced w/ f'string later
-    subreddit_url = "https://www.reddit.com/r/cats/new.json";
+    // retrives data from random subreddit
+    const randSubIndex = Math.floor(Math.random() * subreddit_list.length);
+    let randSub = subreddit_list[randSubIndex];
+    subreddit_url = `https://www.reddit.com/r/${randSub}/new.json`;
     const response = await fetch(subreddit_url);
     const data = await response.json();
+
     // using for testing purposes
     const elems = data.data.children;
     const randIndex = Math.floor(Math.random() * elems.length);
-    const randElem = elems[randIndex].data;
+    let randElem = elems[randIndex].data;
     // randdata's key info
     let title = randElem.title;
     let thumbnail = randElem.thumbnail;
     let thumbnail_height = randElem.thumbnail_height;
     let thumbnail_width = randElem.thumbnail_width;
+    let animated_thumbnail = randElem.url_overridden_by_dest
     ul.innerHTML = `<p>${title}</p>`;
     ul.innerHTML+= `<img src=${thumbnail} width="${thumbnail_width}" height="${thumbnail_height}">`;
+    // if (typeof animated_thumbnail !== 'undefined') {
+    //     ul.innerHTML+= `<img src=${animated_thumbnail} alt = "this doesn't work" width=250/>`;
+    // }
 }
-},{"snoowrap":58}],34:[function(require,module,exports){
+},{"inspector":1,"snoowrap":59}],35:[function(require,module,exports){
 (function (process,global,setImmediate){(function (){
 /* @preserve
  * The MIT License (MIT)
@@ -13753,7 +13764,7 @@ module.exports = ret;
 },{"./es5":13,"async_hooks":undefined}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
 }).call(this)}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("timers").setImmediate)
-},{"_process":7,"timers":29}],35:[function(require,module,exports){
+},{"_process":8,"timers":30}],36:[function(require,module,exports){
 'use strict';
 var handlers;
 
@@ -13841,7 +13852,7 @@ if (typeof Proxy !== 'undefined') {
 
 module.exports = wrap;
 
-},{"harmony-reflect":2}],36:[function(require,module,exports){
+},{"harmony-reflect":3}],37:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13861,7 +13872,7 @@ PromiseCopy.config({
 });
 var _default = PromiseCopy;
 exports.default = _default;
-},{"bluebird":34}],37:[function(require,module,exports){
+},{"bluebird":35}],38:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13928,7 +13939,7 @@ var MAX_API_MORECHILDREN_AMOUNT = 20;
 exports.MAX_API_MORECHILDREN_AMOUNT = MAX_API_MORECHILDREN_AMOUNT;
 var MAX_LISTING_ITEMS = 100;
 exports.MAX_LISTING_ITEMS = MAX_LISTING_ITEMS;
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13951,7 +13962,7 @@ function _default() {
   config.proxies = true;
   return (0, _helpers.addSnakeCaseShadowProps)(config);
 }
-},{"./helpers.js":40}],39:[function(require,module,exports){
+},{"./helpers.js":41}],40:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14007,7 +14018,7 @@ exports.StatusCodeError = StatusCodeError;
 function rateLimitWarning(millisecondsUntilReset) {
   return "Warning: ".concat(_constants.MODULE_NAME, " temporarily stopped sending requests because reddit's ratelimit was exceeded. The request you attempted to send was queued, and will be sent to reddit when the current ratelimit period expires in ").concat(millisecondsUntilReset / 1000, " seconds.");
 }
-},{"./constants.js":37}],40:[function(require,module,exports){
+},{"./constants.js":38}],41:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14247,7 +14258,7 @@ function defineInspectFunc(obj, inspectFunc) {
 function requiredArg(argName) {
   throw new TypeError("Missing required argument ".concat(argName));
 }
-},{"./constants.js":37,"./objects/More.js":45,"lodash":60,"util":2}],41:[function(require,module,exports){
+},{"./constants.js":38,"./objects/More.js":46,"lodash":61,"util":3}],42:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14340,7 +14351,7 @@ var Comment = class Comment extends _VoteableContent.default {
 };
 var _default = Comment;
 exports.default = _default;
-},{"../helpers.js":40,"./Listing.js":42,"./More.js":45,"./VoteableContent.js":54}],42:[function(require,module,exports){
+},{"../helpers.js":41,"./Listing.js":43,"./More.js":46,"./VoteableContent.js":55}],43:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14677,7 +14688,7 @@ var Listing = class Listing extends Array {
 });
 var _default = Listing;
 exports.default = _default;
-},{"../Promise.js":36,"../errors.js":39,"../helpers.js":40,"./More.js":45,"lodash":60,"url":30,"util":2}],43:[function(require,module,exports){
+},{"../Promise.js":37,"../errors.js":40,"../helpers.js":41,"./More.js":46,"lodash":61,"url":31,"util":3}],44:[function(require,module,exports){
 (function (global){(function (){
 "use strict";
 
@@ -15110,7 +15121,7 @@ var LiveThread = class LiveThread extends _RedditContent.default {
 var _default = LiveThread;
 exports.default = _default;
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../helpers.js":40,"./RedditContent.js":48,"events":4,"ws":2}],44:[function(require,module,exports){
+},{"../helpers.js":41,"./RedditContent.js":49,"events":5,"ws":3}],45:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15393,7 +15404,7 @@ var ModmailConversation = class ModmailConversation extends _RedditContent.defau
 };
 var _default = ModmailConversation;
 exports.default = _default;
-},{"./RedditContent.js":48}],45:[function(require,module,exports){
+},{"./RedditContent.js":49}],46:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15532,7 +15543,7 @@ var emptyChildren = new More({
 exports.emptyChildren = emptyChildren;
 var _default = More;
 exports.default = _default;
-},{"../Promise.js":36,"../constants.js":37,"../helpers.js":40,"lodash":60}],46:[function(require,module,exports){
+},{"../Promise.js":37,"../constants.js":38,"../helpers.js":41,"lodash":61}],47:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15733,7 +15744,7 @@ Object.defineProperty(MultiReddit.prototype, 'delete', {
 });
 var _default = MultiReddit;
 exports.default = _default;
-},{"./RedditContent.js":48}],47:[function(require,module,exports){
+},{"./RedditContent.js":49}],48:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15839,7 +15850,7 @@ var PrivateMessage = class PrivateMessage extends _ReplyableContent.default {
 };
 var _default = PrivateMessage;
 exports.default = _default;
-},{"../helpers.js":40,"./ReplyableContent.js":50}],48:[function(require,module,exports){
+},{"../helpers.js":41,"./ReplyableContent.js":51}],49:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16027,7 +16038,7 @@ _constants.HTTP_VERBS.forEach(function (method) {
 
 var _default = RedditContent;
 exports.default = _default;
-},{"../Promise.js":36,"../constants.js":37,"../helpers.js":40,"./Listing.js":42,"lodash":60,"util":2}],49:[function(require,module,exports){
+},{"../Promise.js":37,"../constants.js":38,"../helpers.js":41,"./Listing.js":43,"lodash":61,"util":3}],50:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16406,7 +16417,7 @@ var RedditUser = class RedditUser extends _RedditContent.default {
 };
 var _default = RedditUser;
 exports.default = _default;
-},{"../constants.js":37,"../errors.js":39,"./RedditContent.js":48}],50:[function(require,module,exports){
+},{"../constants.js":38,"../errors.js":40,"./RedditContent.js":49}],51:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16565,7 +16576,7 @@ var ReplyableContent = class ReplyableContent extends _RedditContent.default {
 };
 var _default = ReplyableContent;
 exports.default = _default;
-},{"../helpers.js":40,"./RedditContent.js":48}],51:[function(require,module,exports){
+},{"../helpers.js":41,"./RedditContent.js":49}],52:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16969,7 +16980,7 @@ var Submission = class Submission extends _VoteableContent.default {
 };
 var _default = Submission;
 exports.default = _default;
-},{"../helpers.js":40,"./VoteableContent.js":54}],52:[function(require,module,exports){
+},{"../helpers.js":41,"./VoteableContent.js":55}],53:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -18862,7 +18873,7 @@ var Subreddit = class Subreddit extends _RedditContent.default {
 };
 var _default = Subreddit;
 exports.default = _default;
-},{"../Promise.js":36,"../errors.js":39,"../helpers.js":40,"./RedditContent.js":48,"fs":2,"lodash":60,"stream":13}],53:[function(require,module,exports){
+},{"../Promise.js":37,"../errors.js":40,"../helpers.js":41,"./RedditContent.js":49,"fs":3,"lodash":61,"stream":14}],54:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -18880,7 +18891,7 @@ class UserList {
 }
 
 exports.default = UserList;
-},{}],54:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -19196,7 +19207,7 @@ Object.defineProperty(VoteableContent.prototype, 'delete', {
 });
 var _default = VoteableContent;
 exports.default = _default;
-},{"../Promise.js":36,"../helpers.js":40,"./ReplyableContent.js":50}],55:[function(require,module,exports){
+},{"../Promise.js":37,"../helpers.js":41,"./ReplyableContent.js":51}],56:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -19426,7 +19437,7 @@ var WikiPage = class WikiPage extends _RedditContent.default {
 };
 var _default = WikiPage;
 exports.default = _default;
-},{"./RedditContent.js":48}],56:[function(require,module,exports){
+},{"./RedditContent.js":49}],57:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -19554,7 +19565,7 @@ var _UserList = _interopRequireDefault(require("./UserList.js"));
 var _ModmailConversation = _interopRequireDefault(require("./ModmailConversation.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Comment.js":41,"./Listing.js":42,"./LiveThread.js":43,"./ModmailConversation.js":44,"./More.js":45,"./MultiReddit.js":46,"./PrivateMessage.js":47,"./RedditContent.js":48,"./RedditUser.js":49,"./ReplyableContent.js":50,"./Submission.js":51,"./Subreddit.js":52,"./UserList.js":53,"./VoteableContent.js":54,"./WikiPage.js":55}],57:[function(require,module,exports){
+},{"./Comment.js":42,"./Listing.js":43,"./LiveThread.js":44,"./ModmailConversation.js":45,"./More.js":46,"./MultiReddit.js":47,"./PrivateMessage.js":48,"./RedditContent.js":49,"./RedditUser.js":50,"./ReplyableContent.js":51,"./Submission.js":52,"./Subreddit.js":53,"./UserList.js":54,"./VoteableContent.js":55,"./WikiPage.js":56}],58:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -19921,7 +19932,7 @@ var rawRequest = typeof XMLHttpRequest !== 'undefined' ? require('./xhr') : requ
   gzip: true
 });
 exports.rawRequest = rawRequest;
-},{"./Promise.js":36,"./constants.js":37,"./errors.js":39,"./xhr":59,"lodash":60,"request-promise":2}],58:[function(require,module,exports){
+},{"./Promise.js":37,"./constants.js":38,"./errors.js":40,"./xhr":60,"lodash":61,"request-promise":3}],59:[function(require,module,exports){
 (function (global){(function (){
 "use strict";
 
@@ -22483,7 +22494,7 @@ if (!module.parent && _helpers.isBrowser) {
 
 module.exports = snoowrap;
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./Promise.js":36,"./constants.js":37,"./create_config.js":38,"./errors.js":39,"./helpers.js":40,"./objects/index.js":56,"./request_handler.js":57,"lodash":60,"promise-chains":35,"util":2}],59:[function(require,module,exports){
+},{"./Promise.js":37,"./constants.js":38,"./create_config.js":39,"./errors.js":40,"./helpers.js":41,"./objects/index.js":57,"./request_handler.js":58,"lodash":61,"promise-chains":36,"util":3}],60:[function(require,module,exports){
 "use strict";
 
 var _Promise = _interopRequireDefault(require("./Promise.js"));
@@ -22608,7 +22619,7 @@ module.exports = function rawRequest(options) {
     throw err;
   });
 };
-},{"./Promise.js":36,"./errors.js":39,"querystring":11,"url":30}],60:[function(require,module,exports){
+},{"./Promise.js":37,"./errors.js":40,"querystring":12,"url":31}],61:[function(require,module,exports){
 (function (global){(function (){
 /**
  * @license
@@ -39773,4 +39784,4 @@ module.exports = function rawRequest(options) {
 }.call(this));
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[33]);
+},{}]},{},[34]);
