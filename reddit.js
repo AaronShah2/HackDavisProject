@@ -2,23 +2,27 @@ const pic = document.getElementById("picture");
 const title_container = document.getElementById("reddit-title");
 const timer_disp = document.getElementById("timer");
 let subreddit_list = ["cats", "dogpictures", "earthporn", "spaceporn", "roomporn", "mostbeautiful", "Awwducational"];
-let timer = 0; // in seconds
+var time = null; // gets current time
 let attempts = 10;
-document.getElementById("reset").onclick = function() {
-    if(attempts>0) {
-        getRedditData();
-        attempts -=1;
-        timer_disp.textContent = `Attempts: ${attempts}  Time: 00:00`;
-        if (attempts == 0) {
-            timer = 3600;
-            startTimer(timer, timer_disp);
+
+document.addEventListener('DOMContentLoaded', function() {
+    var reset = document.getElementById("reset");
+    reset.addEventListener('click', function() {
+        if(attempts>0) {
+            getRedditData();
+            attempts -=1;
+            timer_disp.textContent = `Attempts: ${attempts}  Time: 00:00`;
+            if (attempts == 0) {
+                timer = 3600;
+                startTimer(timer, timer_disp);
+            }
         }
-    }
-    else {
-        errorMsg = "You have reached your content limit."
-        title_container.innerHTML = `<p style="font: normal normal bold 14px/16px Roboto, sans-serif; color:#FF0000">${errorMsg}</p>`;
-    }
-}
+        else {
+            errorMsg = "You have reached your content limit."
+            title_container.innerHTML = `<p style="font: normal normal bold 14px/16px Roboto, sans-serif; color:#FF0000">${errorMsg}</p>`;
+        }
+    });
+});
 function startTimer(duration, display) {
     var intTimer = duration, minutes, seconds;
     let myVar = setInterval(function () {
@@ -63,4 +67,9 @@ async function getRedditData() {
     // if (typeof animated_thumbnail !== 'undefined') {
     //     ul.innerHTML+= `<img src=${animated_thumbnail} alt = "this doesn't work" width=250/>`;
     // }
+}
+
+// stores data in JSON file
+function storeDataInJSON(startTIme) {
+    JSONObj
 }

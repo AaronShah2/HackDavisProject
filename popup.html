@@ -7,31 +7,25 @@
     <style>
       .button {
         position: relative;
-        background-color: #4CAF50;
+        background-color: #FFD700;
         border: none;
-        font-size: 28px;
-        color: #FFFFFF;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: bold;  
+        color: #fff;
         padding: 20px;
-        width: 200px;
+        width: 180px;
         text-align: center;
         -webkit-transition-duration: 0.4s; /* Safari */
         transition-duration: 0.4s;
         text-decoration: none;
         overflow: hidden;
         cursor: pointer;
+        outline: none;
       }
-      
-      .button:after {
-        content: "";
-        background: #90EE90;
-        display: block;
-        position: absolute;
-        padding-top: 300%;
-        padding-left: 350%;
-        margin-left: -20px!important;
-        margin-top: -120%;
-        opacity: 0;
-        transition: all 0.8s
+        
+      .button:hover {background-color: #FFEFD5;}    
+        
       }
       
       .button:active:after {
@@ -44,7 +38,6 @@
   </head>
   <!-- <body>
     <div id = "picture">
-
     </div>
     <button id="checkPage">Check this page now!</button>
       
@@ -54,22 +47,24 @@
   </body> -->
   <body>
     <div style = "width: 440px; height: 550px">
-    <h1 style="font: normal normal bold 14px/16px Roboto, sans-serif;position: absolute;width: 119px;height: 16px;left: 66px;top: 25px;">BRIGHT SIDE</h1>
+    <img src = "logo.JPG" style = "position:absolute; margin-left:19px; margin-top:10px; width:45.75px; height:52.5px">  
+    <h1 style="font: normal normal bold 18px/20px Roboto, sans-serif;position: absolute;width: 119px;height: 16px;left: 65px;top: 25px;">BRIGHT SIDE</h1>
     <span data-inline="false" data-icon="ant-design:search-outlined" style="position:absolute;margin-left:344px;margin-top:24px;font-size: 18px;">
-      <div id =timer style="display: block;margin-left: auto;margin-right: auto;width: 10%;text-align:left;">
-        Attempts: 10  Time: 00:00
+      <div id =timer style= "font: normal normal bold 14px/16px Roboto, sans-serif;display: block;margin-left: 430;margin-right: auto;text-align:left;margin-top:15px;">
+        Attempts: 10 <br> Time: 00:00
       </div>
+        
 
     </span>
-    <hr style="position: absolute;width: 440px;height: 0px;left: 0px;top: 66px;border: 1px solid #ECECEC;;text-align:left;margin-left:0;">
-    <h1 style="font: normal normal bold 14px/16px Roboto, sans-serif;position: absolute;width: 184px;height: 16px;left: 28px;top: 84px;">DAILY DOSE OF MOTIVATION</h1>
-    <button id = "reset" style = margin-top:136px>RANDOMIZE</button>
+    <hr style="position: absolute;width: 440px;height: 0px;left: 0px;top: 75px;border: 1px solid #ECECEC;text-align:left;margin-left:0;">
+    <h1 style="font: normal normal bold 18px/20px Roboto, sans-serif;position: absolute;left: 28px;top: 95px;">DAILY DOSE OF MOTIVATION</h1>
+    <button class ="button" id = "reset" style = "margin-left: auto;margin-right: auto;margin-top:145px;" >RANDOMIZE</button>
     <div id = picture style="margin-left: 95px; margin-top:20px;text-align:left;">
       <!--<img style="border-radius:50%;width:203px;height:203px;filter:drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));">-->
     </div>
     <div id = reddit-title style="display: block;margin-left: auto;margin-right: auto;width: 70%;margin-top:10px;text-align:left;">
       <!--<img style="border-radius:50%;width:203px;height:203px;filter:drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));">-->
-    </  div>
+    </div>
     <script src="bundle.js"></script>
   </div>
   </body>
