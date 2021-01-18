@@ -1,7 +1,7 @@
 const pic = document.getElementById("picture");
 const title_container = document.getElementById("reddit-title");
 const timer_disp = document.getElementById("timer");
-let subreddit_list = ["cats", "dogpictures", "earthporn", "spaceporn", "roomporn", "mostbeautiful", "Awwducational"];
+let subreddit_list = ["cats", "dogpictures", "earthporn", "spaceporn", "roomporn", "mostbeautiful", "Awwducational", "aww", "AnimalsBeingBros"];
 var time = null; // gets current time
 let attempts = 10;
 
