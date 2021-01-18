@@ -70,6 +70,3 @@ async function getRedditData() {
 }
 
 // stores data in JSON file
-function storeDataInJSON(startTIme) {
-    JSONObj
-}
